@@ -1,0 +1,195 @@
+/* START NAVBAR STYLES */
+/* Modify the background color */ 
+.navbar-custom {
+    background-color: #20201df4;
+}
+
+.navbar-text {
+    color: #ffffff;
+}
+
+/* Modify brand and text color */
+.navbar-brand,
+.navbar-text {
+    color: #ffffff;
+}
+
+.flexingBox{
+    display: flex;
+}
+/* END NAVBAR STYLES */
+
+
+
+
+/* START SIDEBAR STYLES */
+:root {
+    /* above properties not to be used in the project */
+    --sidebar-text-primary: #ffffff;
+    --sidebar-text-secondary: #ff9898;
+    --sidebar-bg-primary: #20201df4;
+    --sidebar-bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+
+.sidebar-side {
+    z-index: 1000;
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*start will be |o  |, center will be | o |, end will be |  o|*/
+    /* overflow-y: scroll; */
+}
+
+.sidebar-hide {
+    display: none;
+}
+
+.custom-sidebar {
+    height: 100vh; /*viewport height*/
+    position: fixed;
+    background-color: var(--sidebar-bg-primary);
+    transition: width var(--transition-speed) ease;
+    margin-top: '0';
+}
+
+.side-item {
+    width: 100%;
+}
+
+.side-link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--sidebar-text-primary);
+    text-decoration: none;
+}
+
+.side-link-text {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.15ch;
+}
+
+.color-change {
+    color: var(--sidebar-text-primary)
+}
+
+.color-change:hover {
+    color: #fc5151;
+    transition: 400ms;
+}
+
+.link-svg {
+    font-size: 2rem;
+    min-width: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0.7rem;
+    margin-right: 1.5rem;
+}
+
+.side-logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--sidebar-text-secondary);
+    background: var(--sidebar-bg-secondary);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.bar-svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+
+.bar-svg-rotate {
+    transform: rotate(180deg);
+    transition: transform var(--transition-speed);
+}
+
+.child-link {
+    padding: 2px;
+    border: 1px solid white;
+}
+
+@media only screen and (max-width: 1100px) {
+    .custom-sidebar {
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .custom-sidebar {
+        width: 25vw;
+    }
+}
+/* END SIDEBAR STYLES */
+
+
+
+
+
+
+/* START ARTICLE CREATION STYLES */
+.preview_show {
+    left: 0%;
+    transition: 0.5s;
+    right: 0%;
+
+    bottom: 0;
+
+    position: absolute;
+}
+
+.preview_hide {
+    left: 100%;
+    right: 0%;
+    transition: 0.5s;
+
+    bottom: 0;
+
+    position: absolute;
+}
+
+.preview_half {
+    left: auto;
+    right: auto;
+    transition: none;
+    width: 50%;
+}
+
+.parent_preview_half {
+    display: flex;
+    flex-direction: row;
+}
+/* END ARTICLE CREATION STYLES */
+
+
+/* START USER LIKED/SAVED ARTICLES STYLES */
+.itemcard-display-size {
+    width: 30vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    .itemcard-display-size {
+        width: 60vw;
+    }  
+}
+
+@media only screen and (max-width: 650px) {
+    .itemcard-display-size {
+        width: 90vw;
+    }  
+}
+/* END USER LIKED/SAVED ARTICLES STYLES */

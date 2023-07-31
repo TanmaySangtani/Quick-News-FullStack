@@ -1,0 +1,162 @@
+    {
+        "title": "ExplainSpeaking | Why 2020 to 2030 has the makings of a lost decade for the global economy - The Indian Express",
+        "description": "A new World Bank report states that global average potential GDP growth rate—the theoretical growth rate an economy can sustain over the medium term without risking excess inflation— is expected to fall to a three-decade low of 2.2% a year between now and 2030",
+        "newsUrl": "https://indianexpress.com/article/explained/explained-economics/global-economy-recession-2020-2030-decade-8524701/",
+        "imageUrl": "https://images.indianexpress.com/2023/03/Britain_Economy__56542-8aad0.jpg",
+        "publishedAt": "2023-03-29T03:18:39Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Contagion risks loom over 2 Adani companies: Fitch - The Economic Times",
+        "description": "The problems at the Ahmedabad-headquartered Indian multinational conglomerate started after a scathing Hindenburg Research report published on 24 January 2023 alleged the Group of indulging in various malpractices. Since then, the Adani Grop companies have se…",
+        "newsUrl": "https://economictimes.indiatimes.com/markets/stocks/news/fitch-says-contagion-risks-loom-over-two-adani-entities/articleshow/99076553.cms",
+        "imageUrl": "https://img.etimg.com/thumb/msid-99076584,width-1070,height-580,imgsize-1736850,overlay-etmarkets/photo.jpg",
+        "publishedAt": "2023-03-29T02:58:00Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Hong Kong shares jump over 2% as Alibaba surges 15%; Asia markets largely up - CNBC",
+        "description": "Asian markets trade mixed as investors observe the reaction to Alibaba's Asian shares after reorganization, while Australia will see its inflation numbers for February.",
+        "newsUrl": "https://www.cnbc.com/2023/03/29/asia-markets-mixed-as-investors-watch-alibabas-asia-shares-australia-releases-inflation-numbers-.html",
+        "imageUrl": "https://image.cnbcfm.com/api/v1/image/107163177-1670496064595-gettyimages-1244466696-porzycki-chinesec221103_npSC3.jpeg?v=1680046918&w=1920&h=1080",
+        "publishedAt": "2023-03-29T02:22:00Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "AI could replace 300 million jobs, says Goldman Sachs report. Here’s which ones - Moneycontrol",
+        "description": "The rise of artificial intelligence could put 300 million jobs at risk, says a new report from Goldman Sachs. The jobs most at risk are the ones where a large number of tasks can be automated.",
+        "newsUrl": "https://www.moneycontrol.com/news/trends/ai-could-replace-300-million-jobs-says-goldman-sachs-report-heres-which-ones-10328661.html",
+        "imageUrl": "https://images.moneycontrol.com/static-mcnews/2023/02/artificial-intelligence-rep-770x433.jpg",
+        "publishedAt": "2023-03-29T02:18:12Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Stocks to Watch: Adani Enterprises, RIL, Tata Power, Vedanta, IDBI Bank, NTPC | Mint - Mint",
+        "description": "Indian markets recorded a broad-based selloff on Tuesday as the focus shifted toward the upcoming RBI policy. Smallcap stocks continue to see a downward slope, while auto and IT stocks extended their losses. Also, bears held the grip of the market amidst a dr…",
+        "newsUrl": "https://www.livemint.com/market/stock-market-news/stocks-to-watch-adani-enterprises-ril-tata-power-vedanta-idbi-bank-ntpc-11680048868533.html",
+        "imageUrl": "https://www.livemint.com/lm-img/img/2023/03/29/600x338/markets_1677433525123_1680048935131_1680048935131.jpg",
+        "publishedAt": "2023-03-29T01:52:58Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Buzzing Stocks: Vedanta, Zydus Lifesciences, GR Infraprojects and others in news today - Moneycontrol",
+        "description": "Stocks to Watch: Check out the companies making headlines before the opening bell today.",
+        "newsUrl": "https://www.moneycontrol.com/news/photos/business/stocks/buzzing-stocks-vedanta-zydus-lifesciences-gr-infraprojects-and-others-in-news-today-10327811.html",
+        "imageUrl": "https://images.moneycontrol.com/static-mcnews/2023/03/sensex_stocks-770x433.jpg",
+        "publishedAt": "2023-03-29T01:41:16Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Day trading guide for Wednesday: ICICI Bank, Indian Hotels among 9 stocks to buy today — 29th March | Mint - Mint",
+        "description": "Any upside bounce from here could find strong resistance around 17100 levels for Nifty, as per analysts",
+        "newsUrl": "https://www.livemint.com/market/stock-market-news/day-trading-guide-for-wednesday-icici-bank-hdfc-among-6-stocks-to-buy-today-29th-march-11680051744462.html",
+        "imageUrl": "https://www.livemint.com/lm-img/img/2023/03/29/600x338/stocks_1680051878105_1680051878393_1680051878393.jpg",
+        "publishedAt": "2023-03-29T01:26:54Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Hot Stocks | Career Point, Glenmark Pharma, NCC may fetch double-digit returns in short term - Moneycontrol",
+        "description": "NCC is in a classical uptrend and witnessed a breakout out of an ascending triangle formation, then retested its breakout level and resumed its uptrend.",
+        "newsUrl": "https://www.moneycontrol.com/news/business/markets/hot-stocks-career-point-glenmark-pharma-ncc-may-fetch-double-digit-returns-in-short-term-10327161.html",
+        "imageUrl": "https://images.moneycontrol.com/static-mcnews/2023/01/sensex_nifty1-2-770x433.jpg",
+        "publishedAt": "2023-03-29T01:19:10Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Wall Street ends down with tech; investors assess bank comments - Moneycontrol",
+        "description": "Michael Barr, the Federal Reserve's top banking regulator, told a Senate panel that Silicon Valley Bank did a \"terrible\" job of managing risk before its collapse.",
+        "newsUrl": "https://www.moneycontrol.com/news/business/markets/wall-street-ends-down-with-tech-investors-assess-bank-comments-10328401.html",
+        "imageUrl": "https://images.moneycontrol.com/static-mcnews/2020/08/wall-street-1-770x433.jpg",
+        "publishedAt": "2023-03-29T00:37:15Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Stock Market Today: All You Need To Know Going Into Trade On March 29 - BQ Prime",
+        "description": "Stocks in the news, big brokerage calls of the day, complete trade setup and much more!",
+        "newsUrl": "https://www.bqprime.com/markets/stock-market-today-all-you-need-to-know-going-into-trade-on-march-29-2",
+        "imageUrl": "https://gumlet.assettype.com/bloombergquint%2F2023-03%2F0c4f41e0-0008-485c-918f-cf0b3744ba95%2Fkaufmann_mercantile_a7Woj8W6J0s_unsplash.jpg?rect=0%2C657%2C4197%2C2203&w=1200&auto=format%2Ccompress&ogImage=true",
+        "publishedAt": "2023-03-28T23:30:00Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Mutual Funds hardsell debt funds as tax benefits end on March 31 - Indiatimes.com",
+        "description": "India Business News: Mutual fund firms are wooing retail investors who seek to avail of long-term tax benefits in debt funds in the last few days of the fiscal ending Marc",
+        "newsUrl": "https://timesofindia.indiatimes.com/business/india-business/mutual-funds-hardsell-debt-funds-as-tax-benefits-end-on-march-31/articleshow/99073919.cms",
+        "imageUrl": "https://static.toiimg.com/thumb/msid-99073927,width-1070,height-580,imgsize-866777,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "publishedAt": "2023-03-28T23:30:00Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Microsoft-owned Github fires entire Indian engineering team - Hindustan Times",
+        "description": "Microsoft-owned Github has let go entire Indian engineering team, a move unexpected as the country offers affordable labour and is one of the world’s largest developer markets.",
+        "newsUrl": "https://www.hindustantimes.com/technology/microsoftowned-github-fires-entire-indian-engineering-team-101680018736246.html",
+        "imageUrl": "https://www.hindustantimes.com/ht-img/img/2023/03/28/1600x900/rubaitul-azad-HLQDfaJUTVI-unsplash_1680021170626_1680021199878_1680021199878.jpg",
+        "publishedAt": "2023-03-28T16:46:56Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Tata Power Proposes New 400 KV Transmission Corridor For Mumbai To State Regulator - BQ Prime",
+        "description": "The project will require an investment of Rs 600-700 crore over the next 4-5 years.",
+        "newsUrl": "https://www.bqprime.com/markets/tata-power-proposes-new-400-kv-transmission-corridor-for-mumbai-to-state-regulator",
+        "imageUrl": "https://gumlet.assettype.com/bloombergquint%2F2023-03%2Fd086e57b-4d23-48c4-953b-3add552e5154%2Fsun_setting_silhouette_electricity_pylons.jpg?w=1200&auto=format%2Ccompress&ogImage=true",
+        "publishedAt": "2023-03-28T16:27:12Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Shipments of iPhones made in India surged 162% in value terms - TechCrunch",
+        "description": "Locally manufactured iPhone shipments in India grew 162% year-on-year by value in 2022, according to Counterpoint.",
+        "newsUrl": "https://techcrunch.com/2023/03/28/shipments-of-iphone-made-in-india-surged-162-in-value-terms/",
+        "imageUrl": "https://techcrunch.com/wp-content/uploads/2023/03/iphone-india-hand-getty.jpg?resize=1200,799",
+        "publishedAt": "2023-03-28T15:56:06Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Interchange on UPI transactions via PPIs — what it means? - BusinessLine",
+        "description": null,
+        "newsUrl": "https://www.thehindubusinessline.com/blexplainer/interchange-on-upi-transactions-via-ppis-what-it-means/article66672761.ece",
+        "imageUrl": null,
+        "publishedAt": "2023-03-28T15:41:20Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "From SBI Cards to Hindustan Zinc 3 stocks turning ex-dividend tomorrow: Do you own any? | Mint - Mint",
+        "description": "Dividends are a portion of the company’s profit that is issued among the eligible shareholders in the form of cash or additional shares of stocks.",
+        "newsUrl": "https://www.livemint.com/market/stock-market-news/from-sbi-cards-to-hindustan-zinc-3-stocks-turning-ex-dividend-tomorrow-do-you-own-any-11680016964272.html",
+        "imageUrl": "https://www.livemint.com/lm-img/img/2023/03/28/600x338/2-0-1244114454-iStock-839214100-0_1679615828655_1680017007379_1680017007379.jpg",
+        "publishedAt": "2023-03-28T15:27:01Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Gold Price Forecast: XAU/USD to average $2,000 over Q4 as Fed pivots – ING - FXStreet",
+        "description": "Concerns over the banking sector have led to a move towards safe haven assets and Fold has clearly benefited from this. While economists at ING see a",
+        "newsUrl": "https://www.fxstreet.com/news/gold-price-forecast-xau-usd-to-average-2-000-over-q4-as-fed-pivots-ing-202303281459",
+        "imageUrl": "https://editorial.fxstreet.com/images/Markets/Commodities/Metals/Gold/stacked-gold-bars-13094022_Large.jpg",
+        "publishedAt": "2023-03-28T14:59:37Z",
+        "source": "EFGH News",
+        "category": "business"
+    },
+    {
+        "title": "Public sector banks wrote off ₹91,000 cr in 9 months of FY23 - BusinessLine",
+        "description": null,
+        "newsUrl": "https://www.thehindubusinessline.com/money-and-banking/public-sector-banks-wrote-off-91000-cr-in-9-months-of-fy23/article66671983.ece",
+        "imageUrl": null,
+        "publishedAt": "2023-03-28T14:37:30Z",
+        "source": "EFGH News",
+        "category": "business"
+    },

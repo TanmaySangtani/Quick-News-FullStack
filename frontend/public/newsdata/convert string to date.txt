@@ -1,0 +1,10 @@
+db.articles.updateMany(
+  { publishedAt: { $type: "string" } },
+  [
+    {
+      $set: {
+        publishedAt: { $toDate: "$publishedAt" }
+      }
+    }
+  ]
+)
