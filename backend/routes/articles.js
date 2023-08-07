@@ -15,7 +15,7 @@ router.get('/fetcharticle', async (req, res)=>{
     const totalResults = await ArticleSchema.find({category: req.query.category}).count()
     const arts = await ArticleSchema.find({category: req.query.category}).sort({ publishedAt: -1 }).limit(req.query.pageSize*req.query.page).exec()
 
-    console.log(arts)
+    // console.log(arts)
     res.json({totalResults: totalResults, articles: arts})
 })
 
@@ -184,7 +184,7 @@ router.post('/saveuserarticle', fetchuser, async(req,res)=> {
         let data = {...req.body.data}
         const articleId = req.body.id
 
-        console.log(articleId)
+        // console.log(articleId)
 
         data["userid"] = userId
 
@@ -194,6 +194,32 @@ router.post('/saveuserarticle', fetchuser, async(req,res)=> {
             res.json({success: true, articleId: art._id})
         } else {
             const res1 = await UserArticleSchema.updateOne({_id: articleId}, {$set: {title: data.title, dateupdated: data.dateupdated, author: data.author, articleData: data.articleData}})
+
+            if (res1 === null) {
+                res.json({success: false})
+            } else {
+                res.json({success: true, articleId: articleId})   
+            }
+        }        
+    }
+})
+
+router.post('/publishuserarticle', fetchuser, async(req,res)=> {
+
+    if (req.user === "!") {
+        res.json({success: false})
+    } else {
+        const userId = req.user.id
+
+        let data = {...req.body.data}
+        const articleId = req.body.id
+
+        data["userid"] = userId
+
+        if (articleId === 'none') {
+            res.json({success: false})
+        } else {
+            const res1 = await UserArticleSchema.updateOne({_id: articleId}, {$set: {title: data.title, dateupdated: data.dateupdated, author: data.author, articleData: data.articleData, isPublished: true}})
 
             if (res1 === null) {
                 res.json({success: false})
@@ -228,6 +254,34 @@ router.get('/fetchlikedarticles', fetchuser, async(req,res)=>{
 
         res.json({success: true, articles: articleArray})
     }
+})
+
+router.get('/fetchsavedarticles', fetchuser, async(req,res)=>{
+    if (req.user === "!"){
+        res.json({success: false})
+    } else {
+        const userId = req.user.id
+        
+        const user = await UserSchema.findOne({_id: userId})
+        const arr = user.savedArticles
+
+        const articleArray = await ArticleSchema.find({ _id: { $in: arr } })
+
+        res.json({success: true, articles: articleArray})
+    }
+})
+
+router.get('/fetchoneuserarticle', async (req,res)=>{
+
+    const art = await UserArticleSchema.findOne({_id: req.query.id})
+
+    res.json({article: art})
+})
+
+router.get('/townsquarearticles', async(req,res)=>{
+    const arts = await UserArticleSchema.find({isPublished: true})
+
+    res.json(arts)
 })
 
 module.exports = router

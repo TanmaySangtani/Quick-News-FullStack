@@ -36,10 +36,6 @@ const UserArticleSchema = new Schema({
     isPublished: {
         type: Boolean,
         default: false
-    },
-    publishedId: {
-        type: String,
-        default: ''
     }
 })
 

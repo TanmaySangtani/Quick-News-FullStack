@@ -74,6 +74,11 @@ const Sidebar = () => {
             <span className="side-link-text">Technology</span>
           </Link>
         </li>
+        <li className={`side-item child-link ${contentHide}`}>
+          <Link to="/townsquare" className="side-link color-change">  
+            <span className="side-link-text">Town Square</span>
+          </Link>
+        </li>
         {isLoggedIn &&
           <li className={`side-item child-link ${contentHide}`}>
             <Link to="/likedarticles" className="side-link color-change">  

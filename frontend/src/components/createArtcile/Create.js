@@ -18,6 +18,8 @@ const Create = (props) => {
     const [showPreview, setShowPreview] = useState('preview_hide')
     const [articleId, setArticleId] = useState('none')
 
+    const [dispPublish, setDispPublish] = useState('none') 
+
     const [half, setHalf] = useState(false)
 
     const [preview, setPreview] = useState(false)
@@ -116,7 +118,6 @@ const Create = (props) => {
     }
 
     const onClickPublish = async () => {
-
         const data = {
             title: title,
             author: author,
@@ -124,14 +125,17 @@ const Create = (props) => {
             articleData: articleData
         }
 
-        //Incomplete, to be completed later
+        const result  = await publishUserArticle(data, articleId)
 
-        if (articleId === "none") {
-            console.error("Please save before publishing you article")
-        } else {
-            publishUserArticle(data, articleId)
+        if (result.success === true) {
+            setDispPublish('block')
+            setTimeout(()=>{
+                setDispPublish('none')
+            }, 3000)
         }
-
+        else {
+            console.error("error in publishing article")
+        }
     }
 
     useEffect(()=>{
@@ -213,14 +217,20 @@ const Create = (props) => {
                     }
                 })} 
 
+                <div style={{position: 'fixed', top: '0', zIndex: '9999999' ,width: '100%', display: `${dispPublish}`}} className="alert alert-success" role="alert">
+                    Article Published Successfully!
+                </div>
+
+                <div style={{display: 'flex', alignItems: 'center'}}>
                 {/* Save Button */}
-                <button onClick={onClickSave} name='submitbtn' style={{margin: '1rem 0.5rem', backgroundColor: '#538ced', color: 'white', border: '0.1rem solid black', borderRadius: '0.5rem'}}>Save</button>
-                {/* Publish Button */}
-                <button onClick={onClickPublish} name='submitbtn' style={{margin: '1rem 0.5rem', backgroundColor: '#538ced', color: 'white', border: '0.1rem solid black', borderRadius: '0.5rem'}}>Publish</button>
+                    <button onClick={onClickSave} name='submitbtn' style={{margin: '1rem', backgroundColor: '#538ced', color: 'white', border: '0.1rem solid black', borderRadius: '0.5rem'}}>Save</button>
+                    {/* Publish Button */}
+                    {articleId !== "none" && <button onClick={onClickPublish} name='submitbtn' style={{margin: '1rem', backgroundColor: '#538ced', color: 'white', border: '0.1rem solid black', borderRadius: '0.5rem'}}>Publish</button>}
+                </div>
 
             </div>
 
-            <div className={`${half ? '' : showPreview}  ${half ? 'preview_half' : ''}`} id='pblock' style={{paddingTop: '6rem', overflowY: 'auto', height: '100%', backgroundColor: 'white'}}>
+            <div className={`${half ? '' : showPreview}  ${half ? 'preview_half' : ''}`} id='pblock' style={{paddingTop: '6rem', overflowY: 'auto', top: '0', height: '100%', backgroundColor: 'white'}}>
 
                 <div style={{textAlign: 'center'}}>
                     <button id="tp2" style={{margin: '0.5rem'}}onClick={()=>{togglePreview()}}>Toggle Preview</button>

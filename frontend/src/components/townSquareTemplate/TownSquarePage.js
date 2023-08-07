@@ -34,11 +34,14 @@ const TownSquarePage = (props) => {
                 return (
                     <ParagraphTemplate key={index} value={articleData[index].value}/>
                 )
-            } else {
+            }
+            if (element.image) {
                 return (
                   <ImageTemplate key={index} description={articleData[index].description} value={articleData[index].value}/>
                 )
             }
+
+            return (<></>)
         })} 
 
         <AboutAuthor name={author.name} bio={author.bio} image={author.image}/>

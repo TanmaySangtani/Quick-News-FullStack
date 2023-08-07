@@ -109,6 +109,26 @@ const WebState = (props) => {
         }
     }
 
+    const getSavedArticles = async () => {
+        const host = 'http://localhost:5000'
+        const response = await fetch(`${host}/api/article/fetchsavedarticles`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include'
+        })  
+
+        const json = await response.json()
+
+        if (json.success) {
+            return json.articles
+        } else {
+            console.error("Encountered some error fetching articles")
+            return []
+        }
+    }
+
     const likeArticle = async (articleId) => {
         const host = 'http://localhost:5000'
         const response = await fetch(`${host}/api/article/like`, {
@@ -298,15 +318,15 @@ const WebState = (props) => {
     const publishUserArticle = async (data, id) => {
         const host = 'http://localhost:5000'
 
-        const response = await fetch(`${host}/api/auth/getcreatedarticle`, {
+        const response = await fetch(`${host}/api/article/publishuserarticle`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: {
+            body: JSON.stringify({
                 data: data,
                 id: id
-            },
+            }),
             credentials: 'include'
         })
         
@@ -332,8 +352,40 @@ const WebState = (props) => {
         return json  
     }
 
+    const townSquareArticles = async () => {
+        const host = 'http://localhost:5000'
+
+        const response = await fetch(`${host}/api/article/townsquarearticles`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include'
+        })
+        
+        const json = await response.json()
+        return json  
+    }
+
+    const fetchOneUserArticle = async (id) => {
+        const host = 'http://localhost:5000'
+        const response = await fetch(`${host}/api/article/fetchoneuserarticle?id=${id}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }, 
+            credentials: 'include'
+        })
+
+        const json = await response.json()
+        return json
+    }
+
     return (
-        <WebContext.Provider value={{limitStr, whenImageNull,isLoggedIn, checkLogin, logout, likeArticle, removeLikeArticle, dislikeArticle, removeDislikeArticle, saveArticle, removeSaveArticle, getUserArticles, getUserDetails, updateUserDetails, getCreatedArticle, saveUserArticle, publishUserArticle, getLikedArticles} }>
+        <WebContext.Provider value={{limitStr, whenImageNull,isLoggedIn, checkLogin, logout, likeArticle, removeLikeArticle, 
+        dislikeArticle, removeDislikeArticle, saveArticle, removeSaveArticle, getUserArticles, getUserDetails, updateUserDetails, 
+        getCreatedArticle, saveUserArticle, publishUserArticle, getLikedArticles, getSavedArticles, townSquareArticles,
+        fetchOneUserArticle} }>
             {props.children}
         </WebContext.Provider>
     )

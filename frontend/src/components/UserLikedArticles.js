@@ -3,12 +3,11 @@ import { useContext } from 'react'
 import contextAddress from '../context/WebContext'
 import { useEffect } from 'react'
 import Spinner from './Spinner'
-import altImage from './altcardimage.png'
 
 const Item = (props) => {
-    const {title, description, source, imageUrl, newsUrl, publishedAt} = props
+    const { title, description, source, imageUrl, newsUrl, publishedAt} = props
     const context = useContext(contextAddress)
-    const { limitStr, whenImageNull } = context
+    const { limitStr } = context
 
     function dateConversion (str) {
         const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -23,44 +22,24 @@ const Item = (props) => {
         return s
     }
 
-    const onClickRemove = async () => {
-
-    }
-
-    const onClickSave = async () => {
-        
-    }
-
     return (
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <div className="itemcard-display-size" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', borderRadius: '1rem', margin: '0.5rem'}}>
-                <div style={{width: '100%', display: 'flex', justifyContent: 'end'}}>
-                    <button className="fa-solid fa-xmark" style={{margin: '0.5rem', background: 'transparent', border: 'none'}}/>
-                </div>
-                <a href="#" rel="noreferrer" target="_blank">
+            <>
+                <a href={newsUrl} rel="noreferrer" target="_blank">
                 <img src={imageUrl} className="card-img-top" alt="..." />
                 </a>
                 <div className="card-body">
-                <a href="#" rel="noreferrer" target="_blank" style={{textDecoration: 'none', color: 'inherit', fontSize: '1em', fontFamily: 'Times New Roman'}}>
+                <a href={newsUrl} rel="noreferrer" target="_blank" style={{textDecoration: 'none', color: 'inherit', fontSize: '1em', fontFamily: 'Times New Roman'}}>
                     <h5 className="card-title" style={{ fontSize: '1em' }}><b>{limitStr(title,100)}</b></h5>
                 </a>
                     <p className="card-text" style={{fontSize: '1em', fontFamily: 'Times New Roman'}}>{limitStr(description, 100)}</p>
                     <div className="flexingBox">
-                    <a href="#" rel="noreferrer" target="_blank" className="card-title" style={{ fontSize: '1em', width: '50vw', textDecoration: 'none', color: 'inherit'}}><b>{source}</b></a>
+                    <a href={newsUrl} rel="noreferrer" target="_blank" className="card-title" style={{ fontSize: '1em', width: '50vw', textDecoration: 'none', color: 'inherit'}}><b>{source}</b></a>
                     <div style={{ fontSize: '0.8em', textAlign: 'right', width: '50vw'}}><i>{dateConversion(publishedAt)}</i></div>
                     </div>
                     <div>
-                    <ul style={{display: "flex", flexDirection: "row", listStyle: "none", margin: "0px", padding: "0px", justifyContent: 'center'}}>
-                        <li style={{width: "20%"}}>
-                        <button style={{width: "100%", border: '1px solid black', borderRadius: '0.5rem', padding: '0'}}>
-                            Save
-                        </button>
-                        </li>
-                    </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+            </>
     )
 }
 
@@ -68,16 +47,32 @@ const Item = (props) => {
 
 const UserLikedArticles = () => {
     const context = useContext(contextAddress)
-    const { checkLogin, getLikedArticles } = context
-
+    const { checkLogin, getLikedArticles, whenImageNull, removeLikeArticle } = context
     const [artlist, setArtlist] = useState([])
     const [loading, setLoading] = useState(true)
 
     const fetchArts = async () => {
-        console.log(await getLikedArticles())
+        // console.log(await getLikedArticles())
         const arr = await getLikedArticles()
         setArtlist(arr)
         setLoading(false)
+    }
+
+    const onClickRemove = async (articleId) => {
+        const result = await removeLikeArticle(articleId)
+
+        if (result === true) {
+            let temp = [...artlist]
+            const index = temp.findIndex(element=>element["_id"] === articleId)
+
+            if (index !== -1) {
+                temp.splice(index, 1)
+                setArtlist(temp)
+            }
+        }
+        else {
+            console.log("error")
+        }
     }
 
     useEffect(() => {
@@ -94,7 +89,14 @@ const UserLikedArticles = () => {
                 {
                     artlist.map((element)=>{
                         return (
-                                <Item key={element._id} title={element.title} description={element.description} source={element.source} imageUrl={element.imageUrl} newsUrl={element.newsUrl} publishedAt={element.publishedAt}/>
+                        <div key={element._id} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                            <div className="itemcard-display-size" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', borderRadius: '1rem', margin: '0.5rem'}}>
+                                <div style={{width: '100%', display: 'flex', justifyContent: 'end'}}>
+                                    <button onClick={()=>{onClickRemove(element._id)}} className="fa-solid fa-xmark" style={{margin: '0.5rem', background: 'transparent', border: 'none'}}/>
+                                </div>
+                                <Item articleId={element._id} title={element.title} description={element.description} source={element.source} imageUrl={whenImageNull(element.imageUrl)} newsUrl={element.newsUrl} publishedAt={element.publishedAt}/>
+                            </div>
+                        </div>
                         )
                     })
                 }

@@ -144,12 +144,12 @@
 /* START ARTICLE CREATION STYLES */
 .preview_show {
     left: 0%;
-    transition: 0.5s;
     right: 0%;
+    transition: 0.5s;
 
-    bottom: 0;
+    top: 0%;
 
-    position: absolute;
+    position: fixed;
 }
 
 .preview_hide {
@@ -157,9 +157,9 @@
     right: 0%;
     transition: 0.5s;
 
-    bottom: 0;
+    top: 0%;
 
-    position: absolute;
+    position: fixed;
 }
 
 .preview_half {

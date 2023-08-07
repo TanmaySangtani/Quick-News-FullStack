@@ -15,7 +15,7 @@ const AboutAuthor = (props) => {
           <h4 style={{textAlign: 'center', fontWeight: '900', marginBottom: '1rem', wordWrap: 'break-word'}}>
             {name}
           </h4>
-          <p style={{width: '100%', padding: '0 0.4rem', wordWrap: 'break-word'}}>
+          <p style={{width: '100%', fontWeight: '400', padding: '0 0.4rem', wordWrap: 'break-word'}}>
             {bio}
           </p>
         </div>

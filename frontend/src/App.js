@@ -21,6 +21,8 @@ import WebState from './context/WebState';
 import Account from './components/Account';
 import UserLikedArticles from './components/UserLikedArticles';
 import UserSavedArticles from './components/UserSavedArticles';
+import TownSquare from './components/TownSquare';
+import TSArticle from './components/TSArticle';
 
 const App = () => {
   const pageSize = 9
@@ -55,7 +57,8 @@ const App = () => {
         <Route exact path="/articlecreater" element={<Create/>}></Route>
         <Route exact path="/likedarticles" element={<UserLikedArticles/>}></Route>
         <Route exact path="/savedarticles" element={<UserSavedArticles/>}></Route>
-
+        <Route exact path="/townsquare" element={<TownSquare/>}></Route>
+        <Route exact path="/townsquare/:artId" element={<TSArticle/>}></Route>
       </Routes>
     </Router>
     </WebState>
