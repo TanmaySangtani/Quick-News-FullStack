@@ -4,6 +4,7 @@ import contextAddress from '../context/WebContext'
 import { useEffect } from 'react'
 import Spinner from './Spinner'
 import altImage from '../components/altcardimage.png'
+import { Link } from 'react-router-dom'
 
 const Item = (props) => {
     const {title, description, source, newsUrl, imageUrl, publishedAt} = props
@@ -71,7 +72,12 @@ const TownSquare = () => {
             <div style={{ color: '#ff0000', fontSize: '2rem', fontWeight: '900', margin: '0.5rem 0', padding: '1vw 2vw', borderRadius: '2rem', textAlign: 'center' }}>
                 Quick News Town Square
             </div>
-                <h4 style={{ marginBottom: '2rem', fontFamily: 'Times New Roman', textAlign: 'center', fontWeight: '700' }}>Articles Submitted By Quick News Users</h4>
+            <h4 style={{ marginBottom: '1rem', fontFamily: 'Times New Roman', textAlign: 'center', fontWeight: '700' }}>Articles Submitted By Quick News Users</h4>
+            <Link to="/articlecreator">
+                <div style={{textAlign: 'center', margin: '1rem'}}>
+                    Create your own articles Here
+                </div>
+            </Link>
 
                 {
                     artlist.map((element) => {
